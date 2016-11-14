@@ -227,7 +227,7 @@ DESC
           end
 
           record['tag'.freeze] = tag if @output_include_tag
-          record['tag2'.freeze] = "foobar"
+          record['tag2'.freeze] = tag
           topic = (@exclude_topic_key ? record.delete('topic'.freeze) : record['topic'.freeze]) || def_topic
           partition_key = (@exclude_partition_key ? record.delete('partition_key'.freeze) : record['partition_key'.freeze]) || @default_partition_key
           message_key = (@exclude_message_key ? record.delete('message_key'.freeze) : record['message_key'.freeze]) || @default_message_key
